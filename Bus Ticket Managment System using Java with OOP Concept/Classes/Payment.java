@@ -1,0 +1,79 @@
+package Classes;
+import java.lang.*;
+public class Payment extends Bus 
+{
+	private double amountToPay;
+	private String paymentPhoneNumber;
+	private String accountNumber;
+	private String trxId;
+	
+	public Payment()
+	{
+		
+	}
+	public Payment(String busNo, String boarding, String dropping , String date , String departureTime, double ticketPrice, int ticketNo, int ticketAvailableQuantity, double amountToPay, String paymentPhoneNumber, String accountNumber, String trxId)
+	{
+		super(busNo,boarding,dropping,date,departureTime,ticketPrice,ticketNo,ticketAvailableQuantity);
+		this.amountToPay=amountToPay;
+		this.paymentPhoneNumber=paymentPhoneNumber;
+		this.accountNumber=accountNumber;
+		this.trxId=trxId;
+	}
+	
+	public void setAmountToPay(double amountToPay)
+	{
+		this.amountToPay=amountToPay;
+	}
+	public void setPaymentPhoneNumber(String paymentPhoneNumber)
+	{
+		this.paymentPhoneNumber=paymentPhoneNumber;
+	}
+	public void setAccountNumber(String accountNumber)
+	{
+		this.accountNumber=accountNumber;
+	}
+	public void setTrxId(String trxId)
+	{
+		this.trxId=trxId;
+	}
+	
+	
+	public double getAmountToPay()
+	{
+		return amountToPay;
+	}
+	public String getPaymentPhoneNumber()
+	{
+		return paymentPhoneNumber;
+	}
+	public String getAccountNumber()
+	{
+		return accountNumber;
+	}
+	public String getTrxId()
+	{
+		return trxId;
+	}
+	
+	public void showBusDetails()
+	{
+		System.out.println("===========================");
+		System.out.println("*********PAYMENT***********");
+		System.out.println("===========================");
+		System.out.println("BUS No:"+super.getBusNo());
+		System.out.println("BOARDING:"+super.getBoarding());
+		System.out.println("DROPPING:"+super.getDropping());
+		System.out.println("DATE:"+super.getDate());
+		System.out.println("DEPARTURE TIME:"+super.getDepartureTime());
+		System.out.println("TICKET PRICE:"+super.getTicketPrice());
+		System.out.println("TICKET NO:"+super.getTicketNo());
+		System.out.println("TICKET AVAILABLE QUANTITY:"+super.getTicketAvailableQuantity());
+		System.out.println("AMOUNT TO PAY:"+amountToPay);
+		System.out.println("PAYMENT PHONE NUMBER:"+paymentPhoneNumber);
+		System.out.println("ACCOUNT NUMBER:"+accountNumber);
+		System.out.println("TrxId:"+trxId);
+	}
+	
+	
+	
+}
